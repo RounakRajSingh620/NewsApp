@@ -5,8 +5,15 @@ export class News extends Component {
   render() {
     return (
       <div>
-      This is a news
-        <NewsItem/>
+      This is a news Component
+      <NewsItem/>
+      <NewsItem title="myTitle" description="mydesc"/>
+      <NewsItem/>
+      <NewsItem/>
+      <NewsItem/>
+      <NewsItem/>
+      <NewsItem/>
+    
       </div>
     )
   }
