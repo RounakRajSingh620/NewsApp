@@ -44,10 +44,11 @@ export class News extends Component {
   }
   async componentDidMount() {
     console.log("cdm");
-    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=9bcc7f5567eb41a0a52c8885f755801b";
+    let url = "  https://newsapi.org/v2/top-headlines?country=in&apiKey=9bcc7f5567eb41a0a52c8885f755801b";
     let data = await fetch(url);
     let parsedData = await data.json()
     console.log(parsedData);
+    this.setState({ articles: parsedData.articles })
   }
   render() {
     return (
@@ -56,7 +57,7 @@ export class News extends Component {
         <div className="row">
           {this.state.articles.map((element) => {
             return <div className="col-md-4" key={element.url}>
-              <NewsItem title={element.title.slice(0, 45)} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url} />
+              <NewsItem title={element.title ? element.title.slice(0, 45) : ""} description={element.description ? element.description.slice(0, 88) : ""} imageUrl={element.urlToImage} newsUrl={element.url} />
             </div>
           })}
 
