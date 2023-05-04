@@ -15,7 +15,10 @@ export class News extends Component {
     let url = ` https://newsapi.org/v2/top-headlines?country=in&apiKey=9bcc7f5567eb41a0a52c8885f755801b&page=1&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json()
-    this.setState({ articles: parsedData.aricles, totalResults: parsedData.totalResults })
+    this.setState({ 
+      articles: parsedData.articles, 
+      totalResults: parsedData.totalResults 
+    })
   }
   handlePrevClick = async () => {
     console.log("Previous");
@@ -24,7 +27,7 @@ export class News extends Component {
     let parsedData = await data.json()
     this.setState({
       page: this.state.page - 1,
-      articles: parsedData.articles
+      articles: parsedData.articles,
     })
   }
   handleNextClick = async () => {
@@ -39,11 +42,12 @@ export class News extends Component {
       let parsedData = await data.json()
       this.setState({
         page: this.state.page + 1,
-        articles: parsedData.articles
+        articles: parsedData.articles,
       })
     }
   }
   render() {
+   
     return (
       <div className="container my-3">
         <h1 className='text-center'>NewsMonkey-Top Headlines</h1>
