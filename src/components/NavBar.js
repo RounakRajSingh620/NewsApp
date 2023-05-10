@@ -17,29 +17,27 @@ export class NavBar extends Component {
                                 <li className="nav-item">
                                     <a className="nav-link" aria-current="page" href="/">Home</a>
                                 </li>
+                                
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/">About</a>
+                                    <a className="nav-link" href="/business">Business</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Business">Business</a>
+                                    <a className="nav-link" href="/entertainment">Entertainment</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Entertainment">Entertainment</a>
+                                    <a className="nav-link" href="/general">General</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/General">General</a>
+                                    <a className="nav-link" href="/health">Health</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Health">Health</a>
+                                    <a className="nav-link" href="/science">Science</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Science">Science</a>
+                                    <a className="nav-link" href="/sports">Sports</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/Sports">Sports</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/Technology">Technology</a>
+                                    <a className="nav-link" href="/technology">Technology</a>
                                 </li> 
                             </ul>
                         </div>
