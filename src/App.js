@@ -1,14 +1,12 @@
-
 import './App.css';
 
 import React, { Component } from 'react'
 import NavBar from './components/NavBar';
-import News from './components/News';
+import {News} from './components/News';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  
+  Switch,
 } from "react-router-dom";
 
 export default class App extends Component {
@@ -18,7 +16,6 @@ export default class App extends Component {
       <div>
         <Router>
           <NavBar />
-
           <Switch>
             <Route path='/'><News pageSize={5} country="in" category="general" /></Route>
             <Route path='/business'><News pageSize={5} country="in" category="business" /></Route>
@@ -28,12 +25,9 @@ export default class App extends Component {
             <Route path='/science'><News pageSize={5} country="in" category="science" /></Route>
             <Route path='/sportstechnology'><News pageSize={5} country="in" category="sportstechnology" /></Route>
             <Route path='/technology'><News pageSize={5} country="in" category="technology" /></Route>
-
           </Switch>
         </Router>
-
       </div>
     )
   }
 }
-
