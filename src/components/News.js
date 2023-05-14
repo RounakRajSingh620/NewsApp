@@ -7,12 +7,13 @@ export class News extends Component {
   static defaultProps = {
     country: 'in',
     pageSize: 8,
-    category:'general',
+    category: 'general',
   }
   static propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
-    category:PropTypes.string,  }
+    category: PropTypes.string,
+  }
 
   constructor() {
     super();
@@ -63,12 +64,12 @@ export class News extends Component {
 
     return (
       <div className="container my-3">
-        <h1 className='text-center' style={{margin:'35px 0px'}}>NewsMonkey-Top Headlines</h1>
+        <h1 className='text-center' style={{ margin: '35px 0px' }}>NewsMonkey-Top Headlines</h1>
         {this.state.loading && <Spinner />}
         <div className="row">
           {!this.state.loading && this.state.articles.map((element) => {
             return <div className="col-md-4" key={element.url}>
-              <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} />
+              <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} />
             </div>
           })}
         </div>
