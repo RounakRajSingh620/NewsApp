@@ -19,7 +19,7 @@ export class NewsItem extends Component {
             <a rel="noreferrer" href={newsUrl} className="btn btn-sm btn-dark">Read More</a>
           </div>
         </div>
-      </div>
+      </div> 
 
     )
   }
