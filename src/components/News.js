@@ -56,6 +56,9 @@ export class News extends Component {
     //   articles: parsedData.articles,
     //   loading: false,
     // })
+
+    this.setState({ page: this.state.page - 1 });
+    this.updateNews();
   }
   handleNextClick = async () => {
     console.log("Next");
@@ -70,6 +73,9 @@ export class News extends Component {
     //     loading: false,
     //   })
     // }
+
+    this.setState({ page: this.state.page + 1 });
+    this.updateNews();
   }
   render() {
 
