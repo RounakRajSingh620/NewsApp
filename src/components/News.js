@@ -20,7 +20,7 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
-      
+      page:1,
     }
   }
   async updateNews() {
